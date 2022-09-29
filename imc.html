@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <style>
+        div{
+            background-color: aquamarine;
+            text-align: center;
+        }
+        body{
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <P>Coloque os seus dados na calculadora e calcule o seu IMC:</P>
+
+    <DIV>
+        <h2>Altura</h2>
+        Informe a sua altura em (M) <br>
+        <input id="Altura" type="number">
+        <h2>Peso</h2>
+        Informe o seu peso em (kg) <br>
+        <input id="Peso" type="number"><br></br>
+        <button onclick="calcular">Calcular</button><br>
+        <h2>O seu IMC é: </h2><span id="res"></span>
+    </DIV>
+
+    <script>
+        var Altura = document.getElementById("Altura")
+        var Peso = document.getElementById("Peso")
+        var res = document.getElementById("res")
+
+        function calcular(){
+            var Altura = Number(n1.value)
+            var Peso = Number(n2.value)
+            var res = Peso / (Altura * Altura)
+
+        if (res < 18.5 ){
+            res.innerHTML = "O IMC é " + res + ", inicando magreza"
+            res.style = "background-color:red"
+
+        }
+        else if ( res >= 18 && res < 24){
+            res.innerHTML = "O IMC é " + res + ", inicando peso normal" 
+        }
+        else{
+            res.innerHTML = "O IMC é " + res + ", inicando obesidade" 
+        }
+        }
+    </script>
+</body>
+</html>
